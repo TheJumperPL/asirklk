@@ -5,3 +5,5 @@ for ($i = 1973; $i <= 2025; $i = $i + 1){
     echo ("<img src=" . $imagen . ">");
 }
 ?>
+
+<!-- <img src "https://www.glerl.noaa.gov/data/ice/max_anim/png/<?=$i?>.png"> -->
