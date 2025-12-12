@@ -5,7 +5,7 @@ function es_primo2($numero){
         $valor = $numero % $i;
         if($valor == 0){
             echo "Este número NO es primo";
-            return; // salimos de la función
+                return; // salimos de la función eeeeeeeeeeeeeeel primooooooooo
         }
     }
     echo "Este número SÍ es primo";
@@ -42,10 +42,12 @@ echo "<br>";
 es_primo(5);
 
 
-for($i = 1000000; $i < 99999999999999 ; $i = $i + 1){
+for($i = 1000000; ; $i = $i + 1){
     if(es_capicua($i) && es_primo($i)){
         echo "$i es el menor numero primo capicua a partir de 1000000";
         break;
     }
 }
 ?>
+
+hola capicula WASHED JIJI ¿PRACTICA? messirve YMACS
