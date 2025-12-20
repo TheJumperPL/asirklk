@@ -10,6 +10,12 @@ $decimales = .01;
     // $_GET['operador'] ?? '+';
     // $_GET['factor2'] ?? ' ';
 
+if ($enviar && $operador == '%') {
+    $factor1 = round($factor1);
+    $factor2 = round($factor2);
+}
+
+
 function calculadora(){    
     $factor1 = isset($_GET['factor1']) ? $_GET['factor1'] : null;
     $factor2 = isset($_GET['factor2']) ? $_GET['factor2'] : null;
@@ -61,11 +67,12 @@ function calculadora(){
 <form>
         <input name='factor1' type='number' value='<?=$factor1?>' step='<?=$decimales?>' required>
         <select name='operador'>
-            <option value='+'> + </option>    
-            <option value='-'> - </option>    
-            <option value='/'> / </option>    
-            <option value='*'> * </option>
-            <option value='%'> % </option>
+        <option value='+' <?= $operador=='+'?'selected':'' ?>> + </option>    
+        <option value='-' <?= $operador=='-'?'selected':'' ?>> - </option>    
+        <option value='/' <?= $operador=='/'?'selected':'' ?>> / </option>    
+        <option value='*' <?= $operador=='*'?'selected':'' ?>> * </option>
+        <option value='%' <?= $operador=='%'?'selected':'' ?>> % </option>
+
             <!-- conseguir mantener el operando tras operacion, los numeros de los factores sean enteros y que no pete la calculadora  -->
         </select>
         <input name='factor2' type='number' value='<?=$factor2?>' step='<?=$decimales?>' required>
