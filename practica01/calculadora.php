@@ -22,12 +22,12 @@ function calculadora(){
     $operador = isset($_GET['operador']) ? $_GET['operador'] : '+';
     $enviar = isset($_GET['enviar']) ? $_GET['enviar'] : null;
     $total = isset($_GET['total']) ? $_GET['total'] : '';
-    $limite = 10000000000000000;
+    // $limite = 10000000000000000;
 
-    if($factor1 > $limite || $factor2 > $limite){
-        echo "Error";
-        die;
-    }
+    // if($factor1 > $limite || $factor2 > $limite){
+    //     echo "Error";
+    //     die;
+    // }
 
     if($enviar && $operador == '+'){
         $total = $factor1 + $factor2;
@@ -62,6 +62,8 @@ function calculadora(){
         echo "<p>El resultado de $factor1 $operador $factor2 es $total</p>";
     }
 }
+
+calculadora()
 ?>
 
 <form>
